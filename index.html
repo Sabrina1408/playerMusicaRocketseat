@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/assets/styles/global.css">
+    <link rel="shortcut icon" href="public/assets/img/play.svg" type="image/x-icon">
+    <script src="public/assets/scripts/script.js" defer></script>
+    <title>Player de música</title>
+</head>
+<body>
+    <main>
+        <div id="playerVertical" class="player">
+            <div class="wrapper">
+                <audio class="audio"></audio>
+                <img class="imgPlayer" src="public/assets/img/purple.png" alt="Imagem do Álbum">
+                <section class="h1H2">
+                    <h1 class="h1Player">Acorda Devinho</h1> <!-- Caso seja maior que cabe, fazer igual yt music -->
+                    <h2 class="h2Player">Banda Rocketseat</h2>
+                </section>
+                <section class="buttons">
+                    <div class="back">
+                        <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
+                    </div>
+                    <div class="play">
+                        <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
+                    </div>
+                    <div class="next">
+                        <img src="public/assets/img/playNext.svg" alt="Imagem de passar">
+                    </div>
+                </section>
+                <section class="rangeTime">
+                    <input type="range" name="rangeMusic" id="rangeMusic" min="0" max="100" value="0" class="rangeMusic">
+                    <div class="time">
+                        <p class="currentTime">00:00</p>
+                        <p class="totalDuration">00:00</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="playerHorizontalBarra" class="player">
+            <div class="wrapper">
+                <div class="wrapperImgText">
+                    <audio class="audio"></audio>
+                    <img class="imgPlayer" src="public/assets/img/purple.png" alt="Imagem do Álbum">
+                    <section class="h1H2">
+                        <h1 class="h1Player">Acorda Devinho</h1> <!-- Caso seja maior que cabe, fazer igual yt music -->
+                        <h2 class="h2Player">Banda Rocketseat</h2>
+                    </section>
+                </div>
+                <section class="buttons">
+                    <div class="back">
+                        <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
+                    </div>
+                    <div class="play">
+                        <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
+                    </div>
+                    <div class="next">
+                        <img src="public/assets/img/playNext.svg" alt="Imagem de passar">
+                    </div>
+                </section>
+                <section class="rangeTime">
+                    <input type="range" name="rangeMusic" id="rangeMusic" class="rangeMusic">
+                    <div class="time">
+                        <p>00:00</p>
+                        <p>00:00</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="playerHorizontalSemBarra" class="player">
+            <div class="wrapper">
+                <div class="wrapperImgText">
+                    <audio class="audio"></audio>
+                    <img class="imgPlayer" src="public/assets/img/purple.png" alt="Imagem do Álbum">
+                    <section class="h1H2">
+                        <h1 class="h1Player">Acorda Devinho</h1> <!-- Caso seja maior que cabe, fazer igual yt music -->
+                        <h2 class="h2Player">Banda Rocketseat</h2>
+                    </section>
+                </div>
+                <section class="buttons">
+                    <div class="back">
+                        <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
+                    </div>
+                    <div class="play">
+                        <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
+                    </div>
+                    <div class="next">
+                        <img src="public/assets/img/playNext.svg" alt="Imagem de passar">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
