@@ -1,10 +1,10 @@
-<!-- img -->
+![image](https://user-images.githubusercontent.com/88604193/212443680-77762abc-a088-459b-a14a-462bd1bfe461.png)
 <h1>⚙️ Player de musica - Rocketseat</h1>
 <p>Funcionalidades: Play e pause, voltar música e passar música, próxima musica automática. Uado HTML, CSS e JavaScript.</p>
 <h2>⚙️ Links</h2>
 <ul>
   <li>
-    <a href="#" target="_blank">Link do site</a>
+    <a href="https://sabrina1408.github.io/playerMusicaRocketseat/" target="_blank">Link do site</a>
   </li>
   <li>
     <a href="https://sabrinaalves.tk" target="_blank">Meu portfólio</a>
