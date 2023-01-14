@@ -17,14 +17,14 @@ const player = {
         {
             nameSong: "Acorda Devinho",
             artist: "Banda Rocketseat",
-            img: "../public/assets/img/purple.png",
-            song: "../public/assets/audio/acorda-pedrinho.mp3"
+            img: "public/assets/img/purple.png",
+            song: "public/assets/audio/acorda-pedrinho.mp3"
         },
         {
             nameSong: "Universo de coisas que eu desconheço",
             artist: "Lagum e Anavitória",
-            img: "../public/assets/img/unsplash.jpg",
-            song: "../public/assets/audio/universo-de-coisas-que-eu-desconheço.mp3"
+            img: "public/assets/img/unsplash.jpg",
+            song: "public/assets/audio/universo-de-coisas-que-eu-desconheço.mp3"
         }
     ],
     start() {
