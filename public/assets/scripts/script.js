@@ -29,127 +29,102 @@ const player = {
     ],
     start() {
         let i = 0;
-        let updateTimer; /* v */
-        clearInterval(updateTimer); /* v */
+        let updateTimer;
+        clearInterval(updateTimer);
         reset();
+        function musicInformation() {
+            player.h1Player.forEach(element => {
+                element.innerHTML = player.list[i].nameSong;
+            });
+            player.h2Player.forEach(element => {
+                element.innerHTML = player.list[i].artist;
+            });
+            player.imgPlayer.forEach(element => {
+                element.src = player.list[i].img;
+            });
+        }
+        window.onload = musicInformation();
         /* Fazer */
         function reset() {
             player.currentTime.textContent = "00:00";
             player.totalDuration.textContent = "00:00";
             player.rangeMusic.value = 0;
         }
-        player.play.addEventListener("click", () => {
+        this.play.addEventListener("click", () => {
             if(this.audio.paused == true) {
-                this.audio.src = player.list[i].song;
+                this.audio.src = this.list[i].song;
                 this.audio.play();
-                player.h1Player.forEach(element => {
-                    element.innerHTML = player.list[i].nameSong;
-                });
-                player.h2Player.forEach(element => {
-                    element.innerHTML = player.list[i].artist;
-                });
-                player.imgPlayer.forEach(element => {
-                    element.src = player.list[i].img;
-                });
-                player.playPauseImage.src = "public/assets/img/pause.svg";
+                musicInformation();
+                this.playPauseImage.src = "public/assets/img/pause.svg";
                 /* Fazer */
                 updateTimer = setInterval(() => {
-                    console.log("a");
-                }, 1000);
-                console.log(this.audio.duration);
-                let rangeMusicSeparate = this.audio.duration * (rangeMusic.value/100);
-                this.currentTime = rangeMusicSeparate; // Não tá pegando
+                    console.log(Math.floor(this.audio.currentTime/60));
+                    console.log(Math.floor(this.audio.duration/60));
+                    /* console.log((this.audio.currentTime/60).toFixed(2));
+                    console.log((this.audio.duration/60).toFixed(2)); */
+                    /* console.log((this.audio.currentTime/(this.audio.duration/60)*100).toFixed(2))
+                    player.rangeMusic.style.width = (this.audio.currentTime/60*100).toFixed(2); */
+                }, 1000); // Se apertar mais ta indo mais rápido
+                /* let rangeMusicSeparate = this.audio.duration * (this.rangeMusic.value/100);
+                this.currentTime = rangeMusicSeparate; // Não tá pegando */
             } else {
                 this.audio.pause();
-                player.playPauseImage.src = "public/assets/img/play.svg";
+                this.playPauseImage.src = "public/assets/img/play.svg";
             }
         });
         this.audio.addEventListener("ended", () => {
-            if(i < player.list.length-1){
+            if(i < this.list.length-1){
                 i+=1;
                 this.audio.src = player.list[i].song;
                 this.audio.play();
-                player.h1Player.forEach(element => {
-                    element.innerHTML = player.list[i].nameSong;
-                });
-                player.h2Player.forEach(element => {
-                    element.innerHTML = player.list[i].artist;
-                });
-                player.imgPlayer.forEach(element => {
-                    element.src = player.list[i].img;
-                });
+                musicInformation();
             } else {
                 i=0;
                 this.audio.src = player.list[i].song;
                 this.audio.play();
-                player.h1Player.forEach(element => {
-                    element.innerHTML = player.list[i].nameSong;
-                });
-                player.h2Player.forEach(element => {
-                    element.innerHTML = player.list[i].artist;
-                });
-                player.imgPlayer.forEach(element => {
-                    element.src = player.list[i].img;
-                });
+                musicInformation();
             }
         });
         /* fazer */
-        player.rangeMusic.addEventListener("change", () => {
-
+        this.rangeMusic.addEventListener("change", () => {
+            let positionRange = this.audio.duration * (player.rangeMusic.value/100);
+            console.log(player.rangeMusic.value);
+            this.audio.currentTime = positionRange;
         });
     
-        player.back.addEventListener("click", () => {
+        this.back.addEventListener("click", () => {
             i--;
-            if(i<=player.list.length){
+            if(i<=this.list.length){
                 i=0;
             }
             if(this.audio.paused == true){
-                player.playPauseImage.src = "public/assets/img/pause.svg";
+                this.playPauseImage.src = "public/assets/img/pause.svg";
             }
-            player.h1Player.forEach(element => {
-                element.innerHTML = player.list[i].nameSong;
-            });
-            player.h2Player.forEach(element => {
-                element.innerHTML = player.list[i].artist;
-            });
-            player.imgPlayer.forEach(element => {
-                element.src = player.list[i].img;
-            });
-            this.audio.src = player.list[i].song; /* v */
+            musicInformation();
+            this.audio.src = this.list[i].song; /* v */
             this.audio.play();
-            //Mudar o ícone de play pra pause se tiver
         });
-        player.next.addEventListener("click", () => {
+        this.next.addEventListener("click", () => {
             i++;
-            if(i>=player.list.length){
+            if(i>=this.list.length){
                 i=0;
             }
-            // Não está indo
             if(this.audio.paused == true){
-                player.playPauseImage.src = "public/assets/img/pause.svg";
+                this.playPauseImage.src = "public/assets/img/pause.svg";
             }
-            player.h1Player.forEach(element => {
-                element.innerHTML = player.list[i].nameSong;
-            });
-            player.h2Player.forEach(element => {
-                element.innerHTML = player.list[i].artist;
-            });
-            player.imgPlayer.forEach(element => {
-                element.src = player.list[i].img;
-            });
-            this.audio.src = player.list[i].song; /* v */
+            musicInformation();
+            this.audio.src = this.list[i].song; /* v */
             this.audio.play();
-            //Mudar o ícone de play pra pause se tiver
         });
     }
 }
 player.start();
 
-// Onde tem player pode trocar por this
 // Botar o range
 // Botar o tempo da música
 // Pegar todos os elementos
-// Mudar os audios
-// Botar um onload com as informações do primeiro
+// Não está funcionando no Opera, mas funciona no Edge e Chrome
+// Pause vai mais reinicia a musica
 
 //https://www.w3schools.com/tags/ref_av_dom.asp
+//https://www.youtube.com/watch?v=vOBlIR8cneg
