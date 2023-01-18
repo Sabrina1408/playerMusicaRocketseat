@@ -43,6 +43,10 @@ const player = {
                 element.src = player.list[i].img;
             });
         }
+        window.addEventListener("load", () => {
+            console.log("page is fully loaded");
+            musicInformation();
+        });
         window.onload = musicInformation();
         /* Fazer */
         function reset() {
