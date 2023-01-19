@@ -1,6 +1,6 @@
-![image](https://user-images.githubusercontent.com/88604193/212443680-77762abc-a088-459b-a14a-462bd1bfe461.png)
+![image](https://user-images.githubusercontent.com/88604193/213534306-1769304a-873a-4808-8278-6481f90482c7.png)
 <h1>👩🏽‍💻 Player de musica - Rocketseat</h1>
-<p>Funcionalidades: Play e pause, voltar música e passar música, próxima musica automática. Feito com HTML, CSS e JavaScript.</p>
+<p>Funcionalidades: Play e pause, voltar e passar música, próxima musica automática. Feito com HTML, CSS e JavaScript. Pensando em fazer integração para para consumir api no futuro.</p>
 <h2>🎯 Links</h2>
 <ul>
   <li>
@@ -10,9 +10,8 @@
     <a href="https://sabrinaalves.tk" target="_blank">Meu portfólio</a>
   </li>
 </ul>
-<h2>👽 Status</h2>
+<h2>👽 Status - Em construção</h2>
 <ul>
-  <li>Em construção.</li>
   <li>Fazendo barra de range podendo mudar o tempo da música.</li>
   <li>Fazendo funcionalidades para os players na horizontal.</li>
 </ul>
@@ -20,8 +19,25 @@
 <ul>
   <li>Manipulação de audio.</li>
   <li>Elementos relacionados a audio.</li>
-  <li>Ended event.</li>
+  <li>Ended, change, load e timeupdate event.</li>
   <li>Range input</li>
+  <li>!isNaN</li>
+</ul>
+<h2>👀 Ideias/Problemas/Fazer</h2>
+<ul>
+  <li>Toda vez que aperta play reinicia.</li>
+  <li>Duração final e posição atual não estão vindo na forma para aparecer na aplicação.</li>
+  <li>Barra de range com css errado.</li>
+  <li>Imagem do player 2 cortando.</li>
+  <li>Não está funcionando no Opera, mas funciona no Edge e Chrome.</li>
+  <li>Back e Next estão com i errado.</li>
+  <li>Script pros outros players.</li>
+  <li>Talvez mutar em outros players, mas deixar o resto das funcionalidades funcionando.</li>
+  <li>Melhorar código, talvez fazer em classe.</li>
+</ul>
+<h2>🎨 Figma</h2>
+<ul>
+  <li><a href="https://www.figma.com/file/zsBLDiODKQrJNDtBvfVkmW/%23boraCodar---Desafio-1-(Copy)?node-id=1%3A61&t=ulDmj9I0YHaZwt84-0" target="_blank">#boraCodar - Desafio 1</a></li>
 </ul>
 <h2>✌️ Referências</h2>
 <ul>
@@ -33,20 +49,5 @@
   <li><a href="https://www.youtube.com/watch?v=vOBlIR8cneg" target="_blank">JS #S35 🌟 How to get video duration length time in seconds Vanilla JavaScript full Crash Course 2021</a></li>
   <li><a href="https://www.youtube.com/watch?v=ClT_hbwF5qU" target="_blank">JavaScript Music Player Tutorial - #9 of 12 (Update Track Duration )</a></li>
 </ul>
-<h2>👀 Problemas/fazer</h2>
-<ul>
-  <li>Toda vez que aperta play reinicia.</li>
-  <li>Duração final e posição atual não estão vindo na forma para aparecer na aplicação.</li>
-  <li>Botar o tempo da música na aplicação.</li>
-  <li>Toda vez que aperta play reinicia.</li>
-  <li>Barra de range ainda não está mudando.</li>
-  <li>Não está funcionando no Opera, mas funciona no Edge e Chrome.</li>
-</ul>
-<h2>🎨 Figma</h2>
-<a href="https://www.figma.com/file/zsBLDiODKQrJNDtBvfVkmW/%23boraCodar---Desafio-1-(Copy)?node-id=1%3A61&t=ulDmj9I0YHaZwt84-0" target="_blank">#boraCodar - Desafio 1</a>
 
-<!-- https://www.youtube.com/watch?v=vqrjFnq3-uo -->
-<!-- https://www.youtube.com/watch?v=oscPp3KghS8 -->
-<!-- https://www.figma.com/file/zsBLDiODKQrJNDtBvfVkmW/%23boraCodar---Desafio-1-(Copy)?node-id=1%3A61&t=ulDmj9I0YHaZwt84-0 -->
-<!-- https://www.w3schools.com/tags/ref_av_dom.asp -->
 <!-- https://www.youtube.com/watch?v=9uGAZ8MFo88 -->

@@ -59,7 +59,7 @@ main {
 .rangeMusic::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 16px; /* 6px */
+    width: 6px; /* 6px */
     height: 16px; /* 6px */
     background: var(--inputPlaceholder);
     cursor: pointer;
