@@ -43,6 +43,7 @@ main {
 .playPauseImage {
     width: 28.81px;
     height: 28.81px;
+    cursor: pointer;
 }
 .rangeMusic {
     -webkit-appearance: none;
@@ -59,13 +60,21 @@ main {
 .rangeMusic::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 6px; /* 6px */
+    width: 6px;
+    height: 16px; /* 6px */
+    background: var(--inputPlaceholder);
+    cursor: pointer;
+    /* box-shadow: -100px 0px 0px 100px var(--h1eh2); */
+    opacity: 0.8; /* Não tá indo */
+}
+.rangeMusic::-moz-range-thumb {
+    width: 16px; /* 6px */
     height: 16px; /* 6px */
     background: var(--inputPlaceholder);
     cursor: pointer;
     opacity: 0.8; /* Não tá indo */
 }
-.rangeMusic::-moz-range-thumb {
+.rangeMusic::-ms-thumb {
     width: 16px; /* 6px */
     height: 16px; /* 6px */
     background: var(--inputPlaceholder);

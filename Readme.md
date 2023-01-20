@@ -30,7 +30,6 @@
   <li>Barra de range com css errado.</li>
   <li>Imagem do player 2 cortando.</li>
   <li>Não está funcionando no Opera, mas funciona no Edge e Chrome.</li>
-  <li>Back e Next estão com i errado.</li>
   <li>Script pros outros players.</li>
   <li>Talvez mutar em outros players, mas deixar o resto das funcionalidades funcionando.</li>
   <li>Melhorar código, talvez fazer em classe.</li>

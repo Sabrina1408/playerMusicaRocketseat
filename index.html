@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/styles/global.css">
     <link rel="shortcut icon" href="public/assets/img/play.svg" type="image/x-icon">
-    <script src="public/assets/scripts/script.js" defer></script>
+    <!-- <script src="public/assets/scripts/data.js" defer></script>
+    <script src="public/assets/scripts/player.js" defer></script> -->
+    <script src="public/assets/scripts/index.js" defer type="module"></script>
     <title>Player de música</title>
 </head>
 <body>
@@ -23,7 +25,7 @@
                     <div class="back">
                         <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
                     </div>
-                    <div class="play">
+                    <div class="playPause">
                         <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
                     </div>
                     <div class="next">
@@ -31,7 +33,7 @@
                     </div>
                 </section>
                 <section class="rangeTime">
-                    <input type="range" name="rangeMusic" id="rangeMusic" min="0" max="100" value="0" class="rangeMusic">
+                    <input type="range" name="rangeMusic" id="rangeMusic" step="1" min="0" max="100" value="0" class="rangeMusic">
                     <div class="time">
                         <p class="currentTime"></p>
                         <p class="totalDuration"></p>
@@ -53,7 +55,7 @@
                     <div class="back">
                         <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
                     </div>
-                    <div class="play">
+                    <div class="playPause">
                         <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
                     </div>
                     <div class="next">
@@ -63,8 +65,8 @@
                 <section class="rangeTime">
                     <input type="range" name="rangeMusic" id="rangeMusic" class="rangeMusic">
                     <div class="time">
-                        <p>00:00</p> <!-- Tirar depois -->
-                        <p>00:00</p> <!-- Tirar depois -->
+                        <p>00:00</p> <!-- <p class="currentTime"></p> -->
+                        <p>00:00</p> <!-- <p class="totalDuration"></p> -->
                     </div>
                 </section>
             </div>
@@ -83,7 +85,7 @@
                     <div class="back">
                         <img src="public/assets/img/playBack.svg" alt="Imagem de voltar">
                     </div>
-                    <div class="play">
+                    <div class="playPause">
                         <img src="public/assets/img/play.svg" class="playPauseImage" alt="Imagem de play">
                     </div>
                     <div class="next">
