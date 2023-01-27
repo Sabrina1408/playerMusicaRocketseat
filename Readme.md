@@ -12,7 +12,7 @@
 </ul>
 <h2>👽 Status - Em construção</h2>
 <ul>
-  <li>Fazendo barra de range podendo mudar o tempo da música.</li>
+  <li>Resolvendo problemas.</li>
   <li>Fazendo funcionalidades para os players na horizontal.</li>
 </ul>
 <h2>🧐 Aprendizado</h2>
@@ -23,16 +23,21 @@
   <li>Range input</li>
   <li>!isNaN</li>
 </ul>
-<h2>👀 Ideias/Problemas/Fazer</h2>
+<h2>👀 Problemas/Ideias/Fazer</h2>
+<h3>Problemas</h3>
 <ul>
-  <li>Toda vez que aperta play reinicia.</li>
+  <li>✔️ Toda vez que aperta play reinicia.</li>
   <li>Duração final e posição atual não estão vindo na forma para aparecer na aplicação.</li>
   <li>Barra de range com css errado.</li>
+  <li>Pegar todos os elementos.</li>
   <li>Imagem do player 2 cortando.</li>
-  <li>Não está funcionando no Opera, mas funciona no Edge e Chrome.</li>
-  <li>Script pros outros players.</li>
+  <li>✔️ Botar timerUpdate pra dentro do objeto. Att: Foi retirado!</li>
+</ul>
+<h3>Ideias/Fazer</h3>
+<ul>
+  <li>✔️ Melhorar funções dentro de funções (play, src, timerUpdate, rangeUpdate).</li>
+  <li>Talvez script pros outros players.</li>
   <li>Talvez mutar em outros players, mas deixar o resto das funcionalidades funcionando.</li>
-  <li>Melhorar código, talvez fazer em classe.</li>
 </ul>
 <h2>🎨 Figma</h2>
 <ul>

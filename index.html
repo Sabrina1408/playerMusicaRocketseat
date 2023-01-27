@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/styles/global.css">
     <link rel="shortcut icon" href="public/assets/img/play.svg" type="image/x-icon">
-    <!-- <script src="public/assets/scripts/data.js" defer></script>
-    <script src="public/assets/scripts/player.js" defer></script> -->
     <script src="public/assets/scripts/index.js" defer type="module"></script>
     <title>Player de música</title>
 </head>
@@ -33,7 +31,9 @@
                     </div>
                 </section>
                 <section class="rangeTime">
-                    <input type="range" name="rangeMusic" id="rangeMusic" step="1" min="0" max="100" value="0" class="rangeMusic">
+                    <label for="range">
+                        <input type="range" name="rangeMusic" step="1" min="0" max="100" value="0" class="rangeMusic">
+                    </label>
                     <div class="time">
                         <p class="currentTime"></p>
                         <p class="totalDuration"></p>
@@ -63,7 +63,9 @@
                     </div>
                 </section>
                 <section class="rangeTime">
-                    <input type="range" name="rangeMusic" id="rangeMusic" class="rangeMusic">
+                    <label for="range">
+                        <input type="range" name="rangeMusic" class="rangeMusic">
+                    </label>
                     <div class="time">
                         <p>00:00</p> <!-- <p class="currentTime"></p> -->
                         <p>00:00</p> <!-- <p class="totalDuration"></p> -->

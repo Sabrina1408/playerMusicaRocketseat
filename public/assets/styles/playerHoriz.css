@@ -108,6 +108,7 @@ main {
     height: 189.66px;
     object-fit: cover;
     border-radius: 6px;
+    z-index: 1000; /* importante */
 }
 #playerVertical .buttons {
     display: flex;
@@ -137,6 +138,7 @@ main {
     height: 84.03px;
     object-fit: cover;
     border-radius: 6px;
+    z-index: 1000; /* importante */
 }
 #playerHorizontalBarra .buttons, #playerHorizontalSemBarra .buttons {
     display: flex;

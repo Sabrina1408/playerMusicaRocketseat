@@ -27,6 +27,13 @@ export default {
         this.currentTime.textContent = "00:00";
         this.totalDuration.textContent = "00:00";
         this.rangeMusic.value = 0;
+        setInterval(() => {
+            let position = 0;
+            if(!isNaN(this.audio.duration)) {
+                position = this.audio.currentTime * (100/this.audio.duration);
+                this.rangeMusic.value = position;
+            }
+        }, 1000);
     },
     musicInformation() {
         this.h1Player.forEach(element => {
@@ -38,41 +45,23 @@ export default {
         this.imgPlayer.forEach(element => {
             element.src = this.dataAudios[this.i].img;
         });
-        let rangeUpdate;
-        rangeUpdate = setInterval(() => {
-            let position = 0;
-            if(!isNaN(this.audio.duration)) {
-                position = this.audio.currentTime * (100/this.audio.duration);
-                this.rangeMusic.value = position;
-            }
-        }, 1000);
-        clearInterval(timerUpdate);
+        this.audio.src = this.dataAudios[this.i].song;
     },
     ended() {
         if(this.i < this.dataAudios.length-1){
             this.i++;
-            this.audio.src = this.dataAudios[this.i].song;
-            this.audio.play();
             this.musicInformation();
+            this.audio.play();
         } else {
             this.i=0;
-            this.audio.src = this.dataAudios[this.i].song;
-            this.audio.play();
             this.musicInformation();
+            this.audio.play();
         }
     },
     togglePlayPause() {
         if(this.audio.paused == true) {
-            this.audio.src = this.dataAudios[this.i].song; /* Toda vez que da play procura de novo */
             this.audio.play();
-            this.musicInformation();
             this.playPauseImage.src = "public/assets/img/pause.svg";
-            timerUpdate = setInterval(() => {
-                let presentTime;
-                let totalDuration;
-                presentTime = Math.floor(this.audio.currentTime);
-                totalDuration = (this.audio.duration/60).toFixed(2)
-            }, 1000);
         } else {
             this.audio.pause();
             this.playPauseImage.src = "public/assets/img/play.svg";
@@ -87,7 +76,6 @@ export default {
             this.playPauseImage.src = "public/assets/img/pause.svg";
         }
         this.musicInformation();
-        this.audio.src = this.dataAudios[this.i].song;
         this.audio.play();
         },
     previousAudio() {
@@ -99,7 +87,6 @@ export default {
             this.playPauseImage.src = "public/assets/img/pause.svg";
         }
         this.musicInformation();
-        this.audio.src = this.dataAudios[this.i].song;
         this.audio.play();
     },
     timeUpdate() {
@@ -131,10 +118,4 @@ export default {
         let positionRange = this.audio.duration * (this.rangeMusic.value/100);
         this.audio.currentTime = positionRange;
     }
-
 }
-let timerUpdate;
-// timerUpdate pra dentro do objeto
-// Pegar todos os elementos
-// Não está funcionando no Opera, mas funciona no Edge e Chrome
-// Pause vai mais reinicia a musica
