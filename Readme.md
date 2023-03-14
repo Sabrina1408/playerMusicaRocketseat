@@ -1,13 +1,15 @@
 ![image](https://user-images.githubusercontent.com/88604193/213534306-1769304a-873a-4808-8278-6481f90482c7.png)
 <h1>👩🏽‍💻 Player de musica - Rocketseat</h1>
 <p>Funcionalidades: Play e pause, voltar e passar música, próxima musica automática. Feito com HTML, CSS e JavaScript. Pensando em fazer integração para para consumir api no futuro.</p>
-<h2>🎯 Links</h2>
+<h2>🎯 Links e 🎨 Figma</h2>
 <ul>
   <li>
     <a href="https://sabrina1408.github.io/playerMusicaRocketseat/" target="_blank">Link do site</a>
   </li>
+  <li><a href="https://www.figma.com/file/zsBLDiODKQrJNDtBvfVkmW/%23boraCodar---Desafio-1-(Copy)?node-id=1%3A61&t=ulDmj9I0YHaZwt84-0" target="_blank">#boraCodar - Desafio 1</a>
+  </li>
   <li>
-    <a href="https://sabrinaalves.tk" target="_blank">Meu portfólio</a>
+    <a href="https://sabrinaalvesbrito.com.br" target="_blank">Meu portfólio</a>
   </li>
 </ul>
 <h2>👽 Status - Em construção</h2>
@@ -38,10 +40,6 @@
   <li>✔️ Melhorar funções dentro de funções (play, src, timerUpdate, rangeUpdate).</li>
   <li>Talvez script pros outros players.</li>
   <li>Talvez mutar em outros players, mas deixar o resto das funcionalidades funcionando.</li>
-</ul>
-<h2>🎨 Figma</h2>
-<ul>
-  <li><a href="https://www.figma.com/file/zsBLDiODKQrJNDtBvfVkmW/%23boraCodar---Desafio-1-(Copy)?node-id=1%3A61&t=ulDmj9I0YHaZwt84-0" target="_blank">#boraCodar - Desafio 1</a></li>
 </ul>
 <h2>✌️ Referências</h2>
 <ul>
